@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="lab1-style.css">
+		<title>
+			User Interface
+		</title>
+	</head>
+	<body>
+		<h1>User Interface Evaluation</h1>
+		<form id="myform" action="index.php">
+        <br>
+		<h2>Please review the UI of Amazon's <a href="https://www.amazon.ca/">homepage</a>: </h2>
+		<a href=https://www.amazon.ca/>
+			<img src="Amazon-Homepage.png" alt="https://www.amazon.ca/"
+			width="450" height="300">
+		</a>
+		<br>
+        <!--Text type question-->
+        <div class="question">
+            <h3>Personal Information</h3>
+            <p>First name: <input type="text" name="firstname"></p>
+            <p>Last name: <input type="text" name="lastname"></p>
+        </div>
+        <!--Single Choice type question (radio button)-->
+        <div class="question">
+            <h3>What is your gender?</h3>
+            <input type="radio" name="sex" value="male">Male<br>
+            <input type="radio" name="sex" value="female">Female<br>
+            <input type="radio" name="sex" value="unknown">Prefer not to say.<br>
+            <br>
+        </div>
+        <!--Single Choice type quesation (single selection list)-->
+        <div class="question">
+            <h3>How often do you visit Amazon.ca?</h3>
+            <select name="browsingfrequency">
+            <option value="1" selected="selected">1 (Not Often)</option>
+            <option value="2" selected="selected">2</option>
+            <option value="3" selected="selected">3</option>
+            <option value="4" selected="selected">4</option>
+            <option value="5" selected="selected">5 (Often)</option>
+            </select>
+        </div>	
+        <!--Multi-Selection type question-->
+        <div class="question">
+            <h4>Please select ALL statements that you agree with.</h4>
+            <input type="checkbox" name="frequency" value="frequency">I visit Amazon.ca often.<br>
+            <input type="checkbox" name="navigation" value="navigation">The Amazon homepage page is easy to navigate.<br>
+            <input type="checkbox" name="volume" value="volume">I see multiple items that interest me on the homepage.<br>
+            <input type="checkbox" name="issues" value="issues">I have no issues with the homepage.<br>
+            <br>
+        </div>	
+        <!--Likert type question-->
+        <div class="question">
+            <table class="likert">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Strong Disagree</th>
+                        <th>Disagree</th>
+                        <th>Neither</th>
+                        <th>Agree</th>
+                        <th>Strongly Agree</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The UI is effective at capturing my interest.</td>
+                        <td><center><input type="radio" value="1" name="enthusiasm"/></center></td>
+                        <td><center><input type="radio" value="2" name="enthusiasm"/></center></td>
+                        <td><center><input type="radio" value="3" name="enthusiasm"/></center></td>
+                        <td><center><input type="radio" value="4" name="enthusiasm"/></center></td>
+                        <td><center><input type="radio" value="5" name="enthusiasm"/></center></td>
+                    </tr>
+                </tbody>
+            </table>
+        <!--Comment type question-->
+        </div>
+            <div class="question">
+            <h3>Comments:</h3>
+            <textarea placeholder="Please comment on how Amazon may improve their homepage UI." rows="5" cols="30"></textarea>
+        </div>
+        <button id="submitButton" type="button" class="block">Submit</button>
+        <footer>
+        	<p>Website designed by Arbab Haque</p>
+        </footer>
+
+</body>
+</html>
