@@ -23,6 +23,55 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 10.00
+	},
+	{
+		name: "garlic",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true,
+		price: 2.99
+	},
+	{
+		name: "chicken",
+		vegetarian: false,
+		glutenFree: true,
+		organic: false,
+		price: 12.00
+	},
+	{
+		name: "salsa",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true,
+		price: 4.99
+	},
+	{
+		name: "steak",
+		vegetarian: false,
+		glutenFree: true,
+		organic: false,
+		price: 14.00
+	},
+	{
+		name: "spinach",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true,
+		price: 3.50
+	},
+	{
+		name: "apples",
+		vegetarian: true,
+		glutenFree: false,
+		organic: true,
+		price: 3.99
+	},
+	{
+		name: "salt",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		price: 2.00
 	}
 ];
 	
@@ -32,8 +81,24 @@ var products = [
 // prices should be included in this list, as well as a sort based on price
 
 function restrictListProducts(prods, restriction) {
+	var org = document.getElementById("organic").checked;
 	let product_names = [];
-	for (let i=0; i<prods.length; i+=1) {
+	let temp = []
+
+	if(org == true){
+		for (let i=0; i<prods.length; i+=1) {
+			if (prods[i].organic == org){
+				temp.push(prods[i]);
+			}
+		}	
+	}else{
+		temp = prods;
+	}
+
+	for (let i=0; i<temp.length; i+=1) {
+		if ((restriction == "V/G") && ((temp[i].vegetarian == true) && (temp[i].glutenFree == true))){
+			product_names.push(`${temp[i].name} - $${temp[i].price}`);
+		}
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
 			product_names.push(prods[i].name);
 		}
