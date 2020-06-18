@@ -34,5 +34,28 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  font-size: large;
+}
+
+.header {
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  margin-bottom: -15px; 
+}
+
+.page-wrapper:after {
+  content: "";
+  display: block;
+}
+
+footer, .page-wrapper:after {
+  height: 15px; 
+}
+
+footer {
+  text-align: right;
 }
