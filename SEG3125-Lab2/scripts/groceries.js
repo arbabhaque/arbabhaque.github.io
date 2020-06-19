@@ -11,6 +11,13 @@ var products = [
 		price: 1.99
 	},
 	{
+		name: "salt",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		price: 2.00
+	},
+	{
 		name: "bread",
 		vegetarian: true,
 		glutenFree: false,
@@ -18,39 +25,11 @@ var products = [
 		price: 2.35
 	},
 	{
-		name: "salmon",
-		vegetarian: false,
-		glutenFree: true,
-		organic: false,
-		price: 10.00
-	},
-	{
 		name: "garlic",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
 		price: 2.99
-	},
-	{
-		name: "chicken",
-		vegetarian: false,
-		glutenFree: true,
-		organic: false,
-		price: 12.00
-	},
-	{
-		name: "salsa",
-		vegetarian: true,
-		glutenFree: true,
-		organic: true,
-		price: 4.99
-	},
-	{
-		name: "steak",
-		vegetarian: false,
-		glutenFree: true,
-		organic: false,
-		price: 14.00
 	},
 	{
 		name: "spinach",
@@ -67,12 +46,33 @@ var products = [
 		price: 3.99
 	},
 	{
-		name: "salt",
+		name: "salsa",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
+		price: 4.99
+	},
+	{
+		name: "salmon",
+		vegetarian: false,
+		glutenFree: true,
 		organic: false,
-		price: 2.00
-	}
+		price: 10.00
+	},
+	{
+		name: "chicken",
+		vegetarian: false,
+		glutenFree: true,
+		organic: false,
+		price: 12.00
+	},
+	{
+		name: "steak",
+		vegetarian: false,
+		glutenFree: true,
+		organic: false,
+		price: 14.00
+	},
 ];
 	
 
