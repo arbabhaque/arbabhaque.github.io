@@ -100,13 +100,13 @@ function restrictListProducts(prods, restriction) {
 			product_names.push(`${temp[i].name} - $${temp[i].price}`);
 		}
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name);
+			product_names.push(`${temp[i].name} - $${temp[i].price}`);
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name);
+			product_names.push(`${temp[i].name} - $${temp[i].price}`);
 		}
 		else if (restriction == "None"){
-			product_names.push(prods[i].name);
+			product_names.push(`${temp[i].name} - $${temp[i].price}`);
 		}
 	}
 	return product_names;
